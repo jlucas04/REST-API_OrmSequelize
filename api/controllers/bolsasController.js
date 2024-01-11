@@ -1,8 +1,9 @@
 const { Sequelize, DataTypes , QueryTypes } = require('sequelize');
 const iconv = require('iconv-lite');
 
-const sequelize = new Sequelize('fade1', 'suporte', '2s6nvd', {
-  host: '192.168.3.3',
+//informações do Banco de Dados
+const sequelize = new Sequelize('banco', 'user', '123zxse', {
+  host: 'xxx.xxx.x.x',
   dialect: 'mssql', // ou o dialect do seu banco de dados
   dialectOptions: {
     options: {
