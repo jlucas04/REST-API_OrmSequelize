@@ -1,0 +1,14 @@
+FROM node:14-alpine
+
+WORKDIR /usr/app
+
+COPY package*.json ./
+
+RUN npm install -g http-server
+
+COPY . .
+
+EXPOSE 8081
+
+CMD ["http-server"]
+

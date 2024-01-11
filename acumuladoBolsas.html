@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas Bolsistas</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.png" alt="logotipo">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li>
+                    <a href="#">Relatórios </a>
+                    <ul>
+                        <li><a href="./bolsas.html">Consulta Bolsas</a></li>
+                        <li><a href="./analistas.html">Consulta Analistas por Projetos</a></li>
+                        <li><a href="./acumuladoBolsas.html">Consulta Acumalado Bolsas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="section-bolsas" class="section">
+            <h2 class="section-title">Consulta Relatório Pagamento de Bolsas (acumulado por mês)</h2>
+            <label for="dataInicio">Período:</label>
+            <input type="date" id="dataInicio">
+            <input type="date" id="dataFim">
+        
+            <button onclick="consultarAcumulado()">Consultar</button>
+            <button onclick="exportarParaExcel()">Imprimir</button>
+            <table id="resultTable" class="tabelaestilo">
+              <!-- Resultado da consulta será exibido aqui -->
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p class="texto-footer">&copy; 2023 Fundepes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
