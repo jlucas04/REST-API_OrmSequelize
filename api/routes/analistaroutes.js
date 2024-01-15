@@ -1,6 +1,4 @@
 const { Router } = require('express');
-//const bolsasController = require('../controllers/analistaController');
-const cors = require('cors');
 const router = Router();
 const express = require('express');
 const analistaController = require('../controllers/analistaController');

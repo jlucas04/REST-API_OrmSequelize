@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "suporte",
-    "password": "2s6nvd",
-    "database": "fade1",
-    "host": "192.168.3.21",
+    "username": "user",
+    "password": "senha",
+    "database": "banco",
+    "host": "xxx.xxx.x.x",
     "dialect": "mssql"
   },
   "test": {

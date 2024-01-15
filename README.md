@@ -1,2 +1,0 @@
---- REST API com Express e Sequelize ---
-- Consultas ao Banco de dados.

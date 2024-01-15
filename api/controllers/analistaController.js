@@ -1,16 +1,17 @@
 const { Sequelize, DataTypes , QueryTypes } = require('sequelize');
 
 //informações do Banco de Dados
-const sequelize = new Sequelize('banco', 'user', '123zxse', {
-  host: 'xxx.xxx.x.x',
-  dialect: 'mssql', // ou o dialect do seu banco de dados
+const sequelize = new Sequelize('banco', 'user', 'senha', {
+  host: 'xxx.xxx.x.x', //Nesse caso pode utilizar o endereço IP
+  dialect: 'mssql', // dialect do seu banco de dados
 });
 
 class analistaController {
   static async pegaAnalistas(req, res) {
     try {
       // Lógica para requisições GET...
-      const query = `SELECT 
+      const query = `
+  SELECT 
       USUARIO.NOME AS ANALISTA,
       CONVENIO.RegNum AS 'CÓDIGO DO PROJETO',
       SUBSTRING(CONVENIO.TITULO, CHARINDEX('-', CONVENIO.TITULO) + 2, LEN(CONVENIO.TITULO)) as 'NOME DO PROJETO'

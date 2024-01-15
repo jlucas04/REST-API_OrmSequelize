@@ -37,7 +37,7 @@ async function consultarPessoas() {
 
 async function consultanalistas() {
   try{
-    const response = await fetch(`http://localhost:3001/analistas`, {
+    const response = await fetch(`http://localhost:3001/projetos`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function consultarAcumulado() {
   const dataInicio = document.getElementById('dataInicio').value;
   const dataFim = document.getElementById('dataFim').value;
   try{
-    const response = await fetch(`http://localhost:3001/acumulado`, {
+    const response = await fetch(`http://localhost:3001/pagamento`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
